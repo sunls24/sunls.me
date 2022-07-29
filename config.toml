@@ -2,14 +2,15 @@ baseURL = "https://sunls.me/blog/"
 theme = "LoveIt"
 
 # 网站标题
-title = ""
+title = "Thinking and recording"
 
+defaultContentLanguage = "zh-cn"
 # 网站语言, 仅在这里 CN 大写 ["en", "zh-CN", "fr", "pl", ...]
 languageCode = "zh-CN"
 # 语言名称 ["English", "简体中文", "Français", "Polski", ...]
 languageName = "简体中文"
 # 是否包括中日韩文字
-hasCJKLanguage = false
+hasCJKLanguage = true
 
 # 作者配置
 [author]
@@ -22,30 +23,48 @@ hasCJKLanguage = false
   [[menu.main]]
     weight = 1
     identifier = "posts"
-    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-    pre = ""
-    # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
-    post = ""
+    pre = "🔖"
     name = "文章"
     url = "/posts/"
-    # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
-    title = ""
-  [[menu.main]]
-    weight = 2
-    identifier = "tags"
-    pre = ""
-    post = ""
-    name = "标签"
-    url = "/tags/"
-    title = ""
-  [[menu.main]]
-    weight = 3
-    identifier = "categories"
-    pre = ""
-    post = ""
-    name = "分类"
-    url = "/categories/"
-    title = ""
+
+ [params.header]
+   [params.header.title]
+     typeit = false
+     # 标题名称
+     name = "😴"
+  [params.footer]
+    hugo = true
+    since = 2022
+    author = false
+  [params.home]
+    [params.home.profile]
+      enable = true
+      # 主页显示头像的 URL
+      avatarURL = "avatar.jpeg"
+      # 主页显示的网站副标题 (允许 HTML 格式)
+      subtitle = "Keep It Simple, Stupid"
+      # 是否为副标题显示打字机动画
+      typeit = true
+      # 是否显示社交账号
+      social = true
+    [params.home.posts]
+      enable = false
+
+  [params.social]
+    GitHub = "https://github.com/sunls24"
+    Email = "liuss.zy@outlook.com"
+  [params.page]
+    [params.page.toc]
+      # 是否使用目录
+      enable = true
+      # LoveIt 新增 | 0.2.9 是否保持使用文章前面的静态目录
+      keepStatic = false
+      # 是否使侧边目录自动折叠展开
+      auto = true
+    [params.page.share]
+      enable = false
+  [params.analytics]
+    enable = false
 
 # Hugo 解析文档的配置
 [markup]
@@ -53,4 +72,3 @@ hasCJKLanguage = false
   [markup.highlight]
     # false 是必要的设置 (https://github.com/dillonzq/LoveIt/issues/158)
     noClasses = false
-
